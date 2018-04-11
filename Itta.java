@@ -172,11 +172,30 @@ public class Itta {
             System.out.println(w);
             
         }
+        System.out.println("********************************");
         
+        for (int k = 0; k < 20; k++) {
+            if (k%2==0) 
+                continue;
+            System.out.println("K= "+k);
+            
+            if (k>=10) {
+                break;
+            }
+              
+        }
         
+        System.out.println("********************************");
+        for (int k = 0; k < 10; k++) {
+            for (int m = 0; m < 10; m++) {
+                if (m*k %3 ==0) 
+                    continue;
+                System.out.print("k*m= "+ k*m +", ");    
+            }
+            System.out.println(" ");
+        }
         
-        
-        
+    
         System.out.println("");   
     }
 
