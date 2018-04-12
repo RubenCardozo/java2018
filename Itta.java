@@ -200,10 +200,6 @@ public class Itta {
     }
 
     
-    
-    
-    
-    
     private static void CaseEtAll() {
         byte b = 25;
         short s = 26;
