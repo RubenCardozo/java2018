@@ -133,4 +133,11 @@ public class References {
                     -1));
     }
     
+    @Override
+    public boolean equals(Object p){
+        if (p instanceof Personne) {
+            return ((Personne)p).compareTo(this)==0;
+        }
+        return false;
+    }  
 }
