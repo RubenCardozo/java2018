@@ -22,7 +22,7 @@ public class MonTableau {
 
             for (int[] ti : tab) {
                 for(int m : ti){
-                    System.out.println(m);
+                    System.out.print(m);
                 }
             }
     }
