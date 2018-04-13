@@ -1,8 +1,6 @@
 
 package cours;
 
-
-
 public class References {
     
     public static void main(String[] args) {
@@ -111,8 +109,28 @@ public class References {
     } 
 }
 
- class Personne{
+ class Personne implements Comparable<Personne>{
         int id;
         String nom ="anonyme";
-        
+    
+    public Personne() {
     }
+     
+    public Personne(int id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }   
+
+    @Override
+    public String toString() {
+        return "Personne: {" + "id= " + id + ", nom= " + nom + '}';
+    }
+
+    @Override
+    public int compareTo(Personne p) {
+        return (this.id > p.id ? 1 : 
+                  (this.id == p.id ? 0: 
+                    -1));
+    }
+    
+}
