@@ -8,7 +8,7 @@ public class Itta {
     public static void main(String[] args) {
 
         int[] tabi = {8, 6, 4, 2, 0, -2};
-
+        byte b=12;
         //for (int i = 0; i < tabi.length; i++) {
         /*Partie initialisation; partie condition entrée et continuation de la boucle; et la partie fin boucle*/
         //}

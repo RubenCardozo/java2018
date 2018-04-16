@@ -1,6 +1,7 @@
 
 package cours;
 
+import java.util.ArrayList;
 import javafx.scene.transform.Transform;
 
 public class Wrappers {
@@ -38,11 +39,21 @@ public class Wrappers {
         byte by= 10;
         //Integer iii= by;
         Integer iii= (int)by;
-        
+       
         Affiche(10);//byte, short, int, char, Integer, Byte, Short, Character.
         Affiche(iii);//Integer, int.
         
-        Do(10);
+        
+        ArrayList<Integer> ali = new ArrayList<>();
+        ali.add(1);ali.add(2);ali.add(3);ali.add(4);
+        ali.remove(1);
+        ali.remove((Number)3);
+        System.out.println(ali);
+        
+        byte b=12; Byte B=12;
+        ArrayList<Byte> alb = new ArrayList<>();
+        alb.remove(1);//alb.add(2);alb.add(3);alb.add(4);
+        
     }
     
     static void Affiche(int i){
