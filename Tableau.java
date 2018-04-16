@@ -72,7 +72,7 @@ public class Tableau {
         System.out.println(Arrays.equals(tp,tp2));//false
         tp[4] =new Personne(18,"EEEEE");//false
         System.out.println(Arrays.equals(tp,tp2));//false
-        System.out.println(tp[0]==tp2[0]);//false
+        System.out.println(tp[4]==tp2[4]);//false
         System.out.println(tp[4].equals(tp2[4]));//false
         
     }
