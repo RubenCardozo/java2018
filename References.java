@@ -129,8 +129,8 @@ public class References {
     @Override
     public int compareTo(Personne p) {
         return (this.id > p.id ? 1 : 
-                  (this.id == p.id ? 0: 
-                    -1));
+               (this.id == p.id ? 0: 
+                -1));
     }
     
     @Override
