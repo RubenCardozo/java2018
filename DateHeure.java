@@ -148,5 +148,14 @@ public class DateHeure {
         System.out.println(ins3);
         Instant ins4 =ldt.toInstant(ZoneOffset.ofHours(2));
         System.out.println(ins4);
+        
+        ins4 =ins4.plus(14, ChronoUnit.DAYS).minus(5,ChronoUnit.HOURS);
+        
+        System.out.println(ins4);
+        
+        long lo=ins3.until(ins4,ChronoUnit.HOURS);
+        
+        System.out.println(lo);
+        
     }
 }
