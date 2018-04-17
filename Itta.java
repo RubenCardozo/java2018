@@ -105,7 +105,7 @@ public class Itta {
          if ( !bo /* bo== false*/) {
             System.out.println("?????????");
         }
-        int r=0xA; byte b=10; double d=9.9999_999_999_999_999D;
+        int r=0xA; byte by=10; double d=9.9999_999_999_999_999D;
         System.out.println(r==b);
         System.out.println(r==d);
         ++r;

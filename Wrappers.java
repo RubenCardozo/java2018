@@ -50,10 +50,23 @@ public class Wrappers {
         ali.remove((Number)3);
         System.out.println(ali);
         
-        byte b=12; Byte B=12;
-        ArrayList<Byte> alb = new ArrayList<>();
-        alb.remove(1);//alb.add(2);alb.add(3);alb.add(4);
+        byte b =12; Byte B = 12 ;Byte BBB = (int)12;//ENORME PIEGE
+        // Byte BBBB = (Integer)12;
         
+        System.out.println("--------------------------------");
+        ArrayList<Byte> alb = new ArrayList<>();
+        //alb.remove(1);//alb.add(2);alb.add(3);alb.add(4);
+  
+        alb.add((byte)1);
+        alb.add(b);
+        alb.add((byte)3);
+        alb.add((byte)4);
+         System.out.println(alb);
+        alb.remove(1);//2me element
+        alb.remove((byte)1);//2me element
+        alb.remove((Number)4);//0 element 
+        alb.remove((Byte)(byte)4);// Object 4
+        System.out.println(alb);
     }
     
     static void Affiche(int i){
