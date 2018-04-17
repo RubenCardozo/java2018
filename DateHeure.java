@@ -1,12 +1,17 @@
 
 package cours;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.*;
@@ -57,7 +62,7 @@ public class DateHeure {
         System.out.println(d);
         
         LocalTime lt = LocalTime.now();
-        LocalTime lt1 = LocalTime.of(13,15,9);
+        LocalTime lt1 = LocalTime.of(13,15);
         LocalTime lt2 = LocalTime.parse("16:24:10");
         DateTimeFormatter f2 =DateTimeFormatter.ofPattern("HH'h'mm");
         LocalTime lt3 =LocalTime.parse("20h15", f2);
@@ -72,7 +77,7 @@ public class DateHeure {
         
         TemporalAccessor ta2 = f2.parse("18h55");
         lt = LocalTime.from(ta2);
-        System.out.println(lt);
+        System.out.println("lt = "+lt);
         
         LocalDateTime ldt = LocalDateTime.now();
         LocalDateTime ldt1 = LocalDateTime.of(d,lt3);
@@ -104,5 +109,44 @@ public class DateHeure {
         
         System.out.println(p1.subtractFrom(ld5));
         
+        Duration du = Duration.ofDays(5);
+        Duration du2 = Duration.of(5, ChronoUnit.HOURS);
+        Duration du3 = Duration.between(lt1,lt2);
+        
+        System.out.println(du);
+        System.out.println(du2);
+        System.out.println(du3);
+        
+        LocalTime lt5 = (LocalTime) du2.addTo(lt1);
+        System.out.println("lt5= "+lt5);
+        System.out.println(lt5.getMinute());
+        System.out.println(lt5.toSecondOfDay()/60/60f);
+        
+        LocalTime lt6= ChronoUnit.MINUTES.addTo(lt, 10);
+        System.out.println("lt6= "+lt6);
+        long lt7= ChronoUnit.SECONDS.between(lt, lt6);
+        System.out.println(lt7);
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm",Locale.FRANCE);
+        long sec =ldt.toEpochSecond(ZoneOffset.ofHours(2))*1000;
+        System.out.println(sec);
+        System.out.println(sdf.format(new Date(sec)));
+        try {
+            Date d10 = sdf.parse("mardi 17 avril 2018 15:00");
+            System.out.println(d10);
+            LocalDateTime ldt10 = LocalDateTime.ofEpochSecond(d10.getTime()/1000,0,ZoneOffset.ofHours(2));
+            System.out.println(ldt10);
+        } catch (ParseException ex) {
+            ex.getMessage();
+        }
+        
+        Instant ins = Instant.now();
+        System.out.println(ins);
+        Instant ins2 = Instant.ofEpochMilli(t.getTime());
+        System.out.println(ins2);
+        Instant ins3 = Instant.from(ldt.atZone(ZoneId.of("Europe/Berlin")));
+        System.out.println(ins3);
+        Instant ins4 =ldt.toInstant(ZoneOffset.ofHours(2));
+        System.out.println(ins4);
     }
 }
