@@ -155,7 +155,6 @@ public class DateHeure {
         
         long lo=ins3.until(ins4,ChronoUnit.HOURS);
         
-        System.out.println(lo);
-        
+        System.out.println(lo);   
     }
 }
