@@ -55,7 +55,8 @@ public class DateHeure {
         System.out.println(d);
         
         DateTimeFormatter f1=DateTimeFormatter.ofPattern("EEEE d/M/yyyy");
-        System.out.println(d.format(f1));//dimanche 20 5 2018
+        System.out.println("D3========="+d3.format(f1));//dimanche 20 5 2018
+        
         TemporalAccessor ta = f1.parse("mardi 17/4/2018");
         
         d = LocalDate.from(ta);

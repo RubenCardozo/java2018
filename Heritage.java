@@ -1,6 +1,8 @@
 
 package cours;
 
+import java.util.Scanner;
+
 public class Heritage {
     public static void main(String[] args) {
         
@@ -24,6 +26,8 @@ public class Heritage {
         if (ll instanceof Lapin && ll!=null) {
             ((Lapin)ll).setProprietaire("Dupont");
         }
-        System.out.println();
+        System.out.println("Comandes: S (Saisir)");
+        Scanner sc = new Scanner(System.in);
+        sc.nextLine();
     }
 }
