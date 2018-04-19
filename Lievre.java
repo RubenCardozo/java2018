@@ -7,11 +7,12 @@ class Lievre {
     private String nom; //champ ou variable d'instance.  
     
     public Lievre(String nom) {
-        setNom(nom);
+        //setNom(nom);
         //this.nom = nom;
+        this(nom, 0);
     }
 
-    public Lievre(int age, String nom) {
+    public Lievre(String nom, int age) {
         setNom(nom);
         setAge(age);
         //this.age = age;

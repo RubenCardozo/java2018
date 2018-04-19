@@ -1,6 +1,7 @@
 
 package cours;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Heritage {
@@ -8,10 +9,10 @@ public class Heritage {
     public static void main(String[] args) {
         
         Lievre[] terrier =  new Lievre[4];
-        Object ol = new Lievre(null);
-        terrier[0] = new Lievre(null);
+        Object ol = new Lievre("toto");
+        terrier[0] = new Lievre("titi");
         terrier[1] = terrier[0];
-        terrier[2] = new Lapin(null);
+        terrier[2] = new Lapin("cretin");
         terrier[3 ]= (Lievre)ol;
         
         for (Lievre lievre : terrier) {
@@ -61,5 +62,6 @@ public class Heritage {
         if (c==Lievre.class) {//faux
             System.out.println(Lievre.class);
         }
+        
     }
 }
