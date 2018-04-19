@@ -4,9 +4,25 @@ package cours;
 import java.util.Scanner;
 
 public class Heritage {
+    
     public static void main(String[] args) {
         
-        Lapin L1=new Lapin();
+        Lievre[] terrier=  new Lievre[4];
+        Object ol =new Lievre();
+        terrier[0]=new Lievre();
+        terrier[1]=terrier[0];
+        terrier[2]=new Lapin();
+        terrier[3]=(Lievre)ol;
+        
+        for (Lievre lievre : terrier) {
+            lievre.setAge(2);
+            System.out.println(lievre.isMajeur());
+        }
+        
+    }
+    
+    private static void Simple(){
+     Lapin L1=new Lapin();
         Lapin L2= new Lapin();
        
         L1.setAge(10);
@@ -20,14 +36,30 @@ public class Heritage {
         LI1.setAge(3);
         
         Lievre ll= new Lapin();
+        ll.setAge(2);//appelle Lievre.setAge
+        System.out.println(ll.isMajeur());//appelle Lapin.isMajeur
+        System.out.println(ll.toString());//appelle Object.toString
         Object ola = new Lapin();
-        Object oli = new Lapin();
+        Object oli = new Lievre();
         
         if (ll instanceof Lapin && ll!=null) {
-            ((Lapin)ll).setProprietaire("Dupont");
+            ((Lapin)ll).setProprietaire("Dupont");//On peut changer le type declaratif à Lapin, mias pas l'objet. 
         }
-        System.out.println("Comandes: S (Saisir)");
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
+        if (ola instanceof Lievre) {//vrai
+            System.out.println(((Lievre)ola).getNom());
+        }
+        
+        if (oli instanceof Lapin) {//faux
+            System.out.println(((Lapin)oli).getNom());
+        }
+        
+        if (ll.getClass().getSimpleName().equals("Lapin")){//vrais
+            System.out.println(ll.getClass().getName());
+        }
+        Class c= ll.getClass();
+        
+        if (c==Lievre.class) {//faux
+            System.out.println(Lievre.class);
+        }
     }
 }

@@ -6,6 +6,11 @@ class Lievre {
     private int age;//champ ou variable d'instance.
     private String nom; //champ ou variable d'instance.  
 
+//    public Lievre(String nom) {
+//        this.nom = nom;
+//    }
+    
+    
     public boolean isMajeur() {
         return age>1;
     }
@@ -35,5 +40,17 @@ class Lievre {
             throw new RuntimeException("Mauvais age pour le lapin >0 et < 99");
         }
         this.age = age;
+    }
+    public Lievre getFrere(Lievre l){
+        return new Lapin();
+    }
+    public Lievre getFrere(String l){
+        return new Lapin();
+    }
+    public void getFrere(String l, Integer i){
+        return ;
+    }
+    public void getFrere( Integer i,String l){
+        return ;
     }
 }
