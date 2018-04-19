@@ -5,10 +5,18 @@ class Lievre {
     
     private int age;//champ ou variable d'instance.
     private String nom; //champ ou variable d'instance.  
+    
+    public Lievre(String nom) {
+        setNom(nom);
+        //this.nom = nom;
+    }
 
-//    public Lievre(String nom) {
-//        this.nom = nom;
-//    }
+    public Lievre(int age, String nom) {
+        setNom(nom);
+        setAge(age);
+        //this.age = age;
+        //this.nom = nom;
+    }
     
     
     public boolean isMajeur() {
@@ -41,15 +49,18 @@ class Lievre {
         }
         this.age = age;
     }
+    
     public Lievre getFrere(Lievre l){
-        return new Lapin();
+        return new Lapin(null);
     }
+    
     public Lievre getFrere(String l){
-        return new Lapin();
+        return new Lapin(null);
     }
     public void getFrere(String l, Integer i){
         return ;
     }
+    
     public void getFrere( Integer i,String l){
         return ;
     }

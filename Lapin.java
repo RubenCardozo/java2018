@@ -4,7 +4,15 @@ package cours;
 class Lapin extends Lievre{
 
     private String proprietaire;
+    
+    public Lapin(String nom) {
+        super(nom);
+    }
 
+    public Lapin(int age, String nom) {
+        super(age, nom);
+    }
+    
     public String getProprietaire() {
         return proprietaire;
     }
@@ -20,7 +28,7 @@ class Lapin extends Lievre{
 
     @Override
     public Lapin getFrere(Lievre l) {
-        return new Lapin(); 
+        return new Lapin("");
     }
     
 }

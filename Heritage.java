@@ -7,12 +7,12 @@ public class Heritage {
     
     public static void main(String[] args) {
         
-        Lievre[] terrier=  new Lievre[4];
-        Object ol =new Lievre();
-        terrier[0]=new Lievre();
-        terrier[1]=terrier[0];
-        terrier[2]=new Lapin();
-        terrier[3]=(Lievre)ol;
+        Lievre[] terrier =  new Lievre[4];
+        Object ol = new Lievre(null);
+        terrier[0] = new Lievre(null);
+        terrier[1] = terrier[0];
+        terrier[2] = new Lapin(null);
+        terrier[3 ]= (Lievre)ol;
         
         for (Lievre lievre : terrier) {
             lievre.setAge(2);
@@ -22,8 +22,8 @@ public class Heritage {
     }
     
     private static void Simple(){
-     Lapin L1=new Lapin();
-        Lapin L2= new Lapin();
+     Lapin L1=new Lapin(null);
+        Lapin L2= new Lapin(null);
        
         L1.setAge(10);
         L2.setAge(5);
@@ -31,16 +31,16 @@ public class Heritage {
         System.out.println( L1.getAge());
         System.out.println( L2.getAge());
         
-        Lievre LI1=new Lapin();
+        Lievre LI1=new Lievre(null);
         LI1.setNom("Devine");
         LI1.setAge(3);
         
-        Lievre ll= new Lapin();
+        Lievre ll= new Lapin(null);
         ll.setAge(2);//appelle Lievre.setAge
         System.out.println(ll.isMajeur());//appelle Lapin.isMajeur
         System.out.println(ll.toString());//appelle Object.toString
-        Object ola = new Lapin();
-        Object oli = new Lievre();
+        Object ola = new Lapin(null);
+        Object oli = new Lievre(null);
         
         if (ll instanceof Lapin && ll!=null) {
             ((Lapin)ll).setProprietaire("Dupont");//On peut changer le type declaratif à Lapin, mias pas l'objet. 
