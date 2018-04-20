@@ -34,5 +34,13 @@ public class Soleil {
         System.out.println(suu.getV());
         System.out.println(((SousUtil)suu).getV());
         
+        System.out.println("**********Inicialisation************");
+        System.out.println("Main "+SousInit.j);//satis init de init unicament
+        SousInit s=null;//aucun block
+        Init si = new SousInit();//bloc static restants + blocs + ctors
+        SousInit si2 = new SousInit();//blocs + ctors
+        System.out.println(si.i);
+        System.out.println(si.j);
+        
     }
 }
