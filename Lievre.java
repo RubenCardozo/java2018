@@ -13,10 +13,12 @@ class Lievre {
     }
 
     public Lievre(String nom, int age) {
+        super();
         setNom(nom);
         setAge(age);
         //this.age = age;
         //this.nom = nom;
+        System.out.println("B");
     }
     
     
@@ -44,6 +46,7 @@ class Lievre {
      * Methode qui permet de donner l'age du lievre
      * @param age doit être positif
      */
+    
     public void setAge(int age){//Methode d'instance.
         if (age<0 || age>99) {
             throw new RuntimeException("Mauvais age pour le lapin >0 et < 99");

@@ -18,8 +18,7 @@ public class Heritage {
         for (Lievre lievre : terrier) {
             lievre.setAge(2);
             System.out.println(lievre.isMajeur());
-        }
-        
+        }        
     }
     
     private static void Simple(){
@@ -44,7 +43,7 @@ public class Heritage {
         Object oli = new Lievre(null);
         
         if (ll instanceof Lapin && ll!=null) {
-            ((Lapin)ll).setProprietaire("Dupont");//On peut changer le type declaratif à Lapin, mias pas l'objet. 
+            ((Lapin)ll).setProprietaire("Dupont");//On peut changer le type declaratif à Lapin, mais pas l'objet. 
         }
         if (ola instanceof Lievre) {//vrai
             System.out.println(((Lievre)ola).getNom());
@@ -61,7 +60,6 @@ public class Heritage {
         
         if (c==Lievre.class) {//faux
             System.out.println(Lievre.class);
-        }
-        
+        }       
     }
 }
