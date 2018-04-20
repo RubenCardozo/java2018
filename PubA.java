@@ -18,6 +18,8 @@ public class PubA {
         pc.pubMC();//acces public
         
         //DefD dd = new DefD();//Access Default, impossible de instancier à partir d'autre package
+        
+        
     }
     void MA(){
         
