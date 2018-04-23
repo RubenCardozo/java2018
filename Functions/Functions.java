@@ -7,5 +7,9 @@ public class Functions {
         Boite bc= new Boite();
         bc.Ouvrir();
         bc.Fermer();
+        
+        OuvertureRapide bor = new BoiteRapide();
+        bor.Ouvrir();
+        bor.Fermer();
     }
 }
