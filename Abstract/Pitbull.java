@@ -1,17 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cours.Abstract;
 
-/**
- *
- * @author Administrator
- */
+import java.time.LocalDate;
+
 public class Pitbull extends Chien implements Reglemente{
 
-    public Pitbull(String nom) {
+    private LocalDate declaration;
+    
+    public Pitbull(String nom, LocalDate declaration) {
         super(nom);
+        if (declaration!= null) {
+            this.declaration = declaration;
+        }
+        
+    }
+    
+    @Override
+    public LocalDate getDeclaration() {
+            return this.declaration;
     }
 }

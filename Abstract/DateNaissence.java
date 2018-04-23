@@ -11,6 +11,6 @@ import java.time.LocalDate;
  *
  * @author Administrator
  */
-interface Reglemente extends Domestique, Dangereux {
-    LocalDate getDeclaration();
+interface DateNaissence {
+    LocalDate getNaissance();
 }

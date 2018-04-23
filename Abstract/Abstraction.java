@@ -1,6 +1,9 @@
 
 package cours.Abstract;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Abstraction {
     public static void main(String[] args) {
         
@@ -13,7 +16,7 @@ public class Abstraction {
             System.out.println(((Animal)td).getNom());
         }
         
-        Chien d = new Pitbull("TRex");
+        Chien d = new Pitbull("TRex",LocalDate.of(2018, Month.MARCH, 10));
         if(d instanceof Animal){
             System.out.println(((Animal)d).getNom());
         }
@@ -21,10 +24,8 @@ public class Abstraction {
         Dangereux od=(Dangereux)d;
         
         //Object og =(Gentil)d; cours.Pitbull cannot to cours.Gentil
-        Dangereux dc = (Dangereux)new Chien("");
-        
-        
-        
+        //Dangereux dc = (Dangereux)new Chien("");
+         
     } 
 }
 

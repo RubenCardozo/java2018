@@ -1,13 +1,16 @@
 
 package cours.Abstract;
 
-abstract class Animal {
+import java.time.LocalDate;
+
+abstract class Animal implements DateNaissence{
     
     String nom;
     
     public String getNom() {
         return nom;
     }
+    
 
     public void setNom(String nom) {
         this.nom = nom;
@@ -17,6 +20,9 @@ abstract class Animal {
     public Animal(String nom) {
         this.nom = nom;
     }
-    
-    
+
+    @Override
+    public LocalDate getNaissance() {
+        return null;
+    }
 }
