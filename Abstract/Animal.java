@@ -26,7 +26,7 @@ abstract class Animal extends EtreVivant implements DateNaissence{
         return DateNaissence.MAXDATE;
     }
     
-    public abstract LocalDate getDateDeces();
+    abstract LocalDate getDateDeces();
     
     
 
