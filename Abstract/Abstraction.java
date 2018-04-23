@@ -16,16 +16,15 @@ public class Abstraction {
             System.out.println(((Animal)td).getNom());
         }
         
-        Chien d = new Pitbull("TRex",LocalDate.of(2018, Month.MARCH, 10));
+        Dangereux d = new Pitbull("TRex",LocalDate.now());
         if(d instanceof Animal){
-            System.out.println(((Animal)d).getNom());
+            System.out.println(((Animal)d).getNaissance());
         }
         
-        Dangereux od=(Dangereux)d;
+        //Dangereux od=(Dangereux)d;
         
         //Object og =(Gentil)d; cours.Pitbull cannot to cours.Gentil
-        //Dangereux dc = (Dangereux)new Chien("");
-         
+        //Dangereux dc = (Dangereux)new Chien("");    
     } 
 }
 

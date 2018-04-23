@@ -1,6 +1,6 @@
 
 package cours.Abstract;
 
-public class Gentil {
-    
+interface Gentil {
+    int getNiveau();
 }

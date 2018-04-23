@@ -12,5 +12,9 @@ import java.time.LocalDate;
  * @author Administrator
  */
 interface DateNaissence {
+    
+    public final static LocalDate MAXDATE = LocalDate.now();
+    
     LocalDate getNaissance();
+    
 }

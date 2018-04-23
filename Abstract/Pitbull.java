@@ -19,4 +19,9 @@ public class Pitbull extends Chien implements Reglemente{
     public LocalDate getDeclaration() {
             return this.declaration;
     }
+
+    @Override
+    public float getNiveau() {
+        return 8;
+    }
 }
