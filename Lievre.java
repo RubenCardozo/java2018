@@ -1,7 +1,7 @@
 
 package cours;
 
-class Lievre {
+public class Lievre {
     
     private int age;//champ ou variable d'instance.
     private String nom; //champ ou variable d'instance.  
@@ -18,7 +18,7 @@ class Lievre {
         setAge(age);
         //this.age = age;
         //this.nom = nom;
-        System.out.println("B");
+        //System.out.println("B");
     }
     
     
