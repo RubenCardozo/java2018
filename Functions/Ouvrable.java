@@ -2,7 +2,7 @@
 package cours.Functions;
 
 
-
+@FunctionalInterface
 public interface Ouvrable {
     
     void Ouvrir();

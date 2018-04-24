@@ -3,7 +3,7 @@ package cours.Functions;
 
 import static cours.Functions.Ouvrable.*;
 
-
+@FunctionalInterface
 public interface OuvertureRapide extends Ouvrable{
     int TEMPSDEFERMATURE=2;
     
@@ -17,4 +17,5 @@ public interface OuvertureRapide extends Ouvrable{
         System.out.println("Peut s'ouvrir en " + Ouvrable.getTempsDeFermature()/2+" sec");
     }
     
+    void Jeter();  
 }
