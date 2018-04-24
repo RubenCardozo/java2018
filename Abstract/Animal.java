@@ -3,7 +3,7 @@ package cours.Abstract;
 
 import java.time.LocalDate;
 
-abstract class Animal extends EtreVivant implements DateNaissence{
+public abstract class Animal extends EtreVivant implements DateNaissence{
     
     String nom;
     
@@ -26,8 +26,10 @@ abstract class Animal extends EtreVivant implements DateNaissence{
         return DateNaissence.MAXDATE;
     }
     
-    abstract LocalDate getDateDeces();
+    public abstract LocalDate getDateDeces();
     
-    
-
+    public int Age(LocalDate dNais, LocalDate auj){
+        
+     return 0;
+    }
 }
