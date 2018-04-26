@@ -10,42 +10,46 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 public class LesException {
-
+    
+   
+            
     public static void main(String[] args) {
+        
+        char c='c';
+        String s=null;
+        String a = c+s;
+        System.out.println(a);
         
         try {
             Metier();
         } catch (Exception ex) {
-             if (ex.getCause()!=null) {
-                System.err.println("Cause metier = "+ex.getCause().getMessage());
+            if (ex.getCause() != null) {
+                System.err.println("Cause metier = " + ex.getCause().getMessage());
             }
-            System.out.println("GUI = "+ex.getMessage());
+            System.out.println("GUI = " + ex.getMessage());
         }
-  
+
     }
-    
-    
-    static void Metier() throws MetierException{
+
+    static void Metier() throws MetierException {
         try {
             Dal();
         } catch (Exception mex) {
-            if (mex.getCause()!=null) {
-                System.err.println("Cause dal = "+mex.getCause().getMessage());
+            if (mex.getCause() != null) {
+                System.err.println("Cause dal = " + mex.getCause().getMessage());
             }
-            throw new MetierException("Creation de fichier impossible.",mex);
-        }
-    }
-        
-    static void Dal() throws DalException {
-        try {
-            File.createTempFile("Tempo", "\\1iti");
-        }catch (IOException ioex) {
-            throw new DalException("pas de creation de fichier.",ioex);
+            throw new MetierException("Creation de fichier impossible.", mex);
         }
     }
 
-    
-    
+    static void Dal() throws DalException {
+        try {
+            File.createTempFile("Tempo", "\\1iti");
+        } catch (IOException ioex) {
+            throw new DalException("pas de creation de fichier.", ioex);
+        }
+    }
+
     private static void Danger() {
         try {
             CreerFichier2();
@@ -58,7 +62,7 @@ public class LesException {
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
         }
-        
+
         try {
             FauxPiege();
         } catch (IOException ex) {
@@ -69,7 +73,7 @@ public class LesException {
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
-        
+
         try {
             SuperVillain();
         } catch (IOException iex) {
@@ -77,20 +81,20 @@ public class LesException {
         } catch (SQLException iex) {
             System.err.println(iex.getMessage());
         }
-        
+
         try {
             SuperVillain();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
-        
+
         try {
             DocStrange();
         } catch (Throwable ex) {
             System.err.println(ex.getMessage());
         }
     }
-    
+
     static void CreerFichier() {
         try {
             File.createTempFile("tempo", "titi");
@@ -112,20 +116,19 @@ public class LesException {
             throw new IOException("Warning!!!!");
         }
     }
-    
+
     static void FauxPiege() throws IOException {
     }
 
-    static void SuperVillain() throws IOException, SQLException{
-    
+    static void SuperVillain() throws IOException, SQLException {
     }
-    
-    static void DocStrange() throws Throwable{//Summum de la dangerosité
+
+    static void DocStrange() throws Throwable {//Summum de la dangerosité
     }
-    
-    static void Hulk() throws Error{
+
+    static void Hulk() throws Error {
     }
-    
+
     private static void runtime() {
 
         try {
@@ -189,5 +192,4 @@ public class LesException {
         }
         return td[0] / td[1];
     }
-
 }
